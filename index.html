@@ -8,57 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Random Quote Generator</title>
-  <script>
-    //array containing object
-    const QUOTES = [
-      {
-        quote : "You have passed through life without an opponent—no one can ever know what you are capable of, not even you.", 
-        author: "Seneca"
-      },
-      {
-        quote : "Look back over the past, with its changing empires that rose and fell, and you can foresee the future too.", 
-        author: "Marcus Aurelius"
-      },
-      {
-        quote : "First say to yourself what you would be; and then do what you have to do.", 
-        author: "Epictetus"
-      },
-      {
-        quote : "The only reason for time is so that everything doesn't happen at once.", 
-        author: "Einstein"
-      },
-      {
-        quote : "Tell me and I forget. Teach me and I remember. Involve me and I learn.", 
-        author: "Benjamin Franklin"
-      }
-
-    ]
-
-    window.onload = init;
-    function init() {
-      generateQuote()
-    };
-
-    function generateQuote() {
-      var randomNum = Math.floor((Math.random() * (QUOTES.length)));
-      
-      let twitterLink = "https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=";
-      // add quote
-      twitterLink += QUOTES[randomNum].quote;
-      // add author
-      twitterLink += " -" + QUOTES[randomNum].author;
-
-      document.getElementById("text").innerText = QUOTES[randomNum].quote
-      document.getElementById("author").innerText = "-" +QUOTES[randomNum].author
-      document.getElementById("tweet-quote").href = twitterLink;
-    }
-  </script>
-  <!-- <style>
-    * {
-      font-size: 1.5rem;
-      text-align: center;
-    }
-  </style> -->
+  <script src="quotes.js"></script>
 </head>
 
 <body>
